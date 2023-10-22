@@ -74,6 +74,8 @@ if (n % i === 0 || n % (i + 2) === 0) {
   }
 
 
+
+  /*mapa menu alimentaciión*/
 let menus = new Map ();
 let lunes = {dia: 'lunes', primero: 'macarrones', segundo:'filete', postre: 'yogur'};
 let martes = {dia: 'martes', primero: 'sopa', segundo: 'hamburguesa', postre: 'tiramisu'};
@@ -100,3 +102,7 @@ for (let [k,v] of menus){
     }
 
 }
+console.log ('menu', menus);
+
+
+/* mapa de grupos de música*/
