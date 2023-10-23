@@ -110,31 +110,74 @@ const toys2 = [
 	{id: 40, name: 'El gato felix', sellCount: 35}
 ]
 
-for (items of toy2) {
+for (items of toys2) {
     if (items.sellCount > 15) {
         popularToys.push (items);
+    }
 }
 /* 
 EJERCICIO 7: (OPCIONALES)
 Completa los datos de la tabla en index.html utilizando los valores del siguiente mapa.
 */
+
 let toysMap = new Map();
 let newToysArray = new Array();
 let toy1 = 	{id: 23, name: 'Barbie Man'}; // 15
 let toy2 = {id: 40, name: 'El gato con Guantes'}; // 8
 let toy3 = {id: 40, name: 'El gato felix'}; // 35 
-toysMap.set(toy1, 15);
+toysMap.set(toy1, 15); 
 toysMap.set(toy2, 8);
 toysMap.set(toy3, 35);
-let rowAcolA = 'algo'; // extraer de mi mapa el parametro A del juguete uno. 
-let rowAcolB = 'algo'; 
-let rowAcolC = 'algo'; 
-let rowBcolA = 'algo'; // extraer de mi mapa el parametro A del juguete uno. 
-let rowBcolB = 'algo'; 
-let rowBcolC = 'algo';
-let rowCcolA = 'algo'; // extraer de mi mapa el parametro A del juguete uno. 
+newToysArray = Array.from(toysMap.values());
+newToysArray = Array.from(toysMap.keys());
+newToysArray = Array.from(toysMap.entries());
+
+let rowAcolA; // extraer de mi mapa el parametro A del juguete uno. 
+for (const [toy, value] of toysMap) {
+    if (toy === toy1) {
+      rowAcolA = toy.id;
+      break;
+    }
+  }
+let rowAcolB;
+for (const [toy, value] of toysMap) {
+    if (toy === toy1) {
+      rowAcolB = toy.name;
+      break;
+    }
+  }
+let rowAcolC= newToysArray[0][1];
+
+let rowBcolA; // extraer de mi mapa el parametro A del juguete dos. 
+for (const [toy, value] of toysMap) {
+    if (toy === toy2) {
+      rowAcolB = toy.id;
+      break;
+    }
+  }
+let rowBcolB;
+for (const [toy, value] of toysMap) {
+    if (toy === toy2) {
+      rowAcolB = toy.name;
+      break;
+    }
+  } 
+let rowBcolC = newToysArray[1][1];
+let rowCcolA; // extraer de mi mapa el parametro A del juguete tres. 
+for (const [toy, value] of toysMap) {
+    if (toy === toy3) {
+      rowAcolB = toy.id;
+      break;
+    }
+  }
 let rowCcolB = 'algo'; 
-let rowCcolC = 'algo';
+for (const [toy, value] of toysMap) {
+    if (toy === toy3) {
+      rowAcolB = toy.name;
+      break;
+    }
+  }
+let rowCcolC = newToysArray[1][2];
 
 /*
 EJERCICIO 8: FIBONACCI (OPCIONALES)
@@ -151,22 +194,22 @@ Se pide:
 
 */
 let n = 15;
-let numeros = new Array();
+let num = new Array();
 
 // Inicializamos los valores iniciales de la secuencia
 let a = 0;
 let b = 1;
 
 // Agregamos los primeros dos números a la secuencia
-numeros.push(a);
-numeros.push(b);
+num.push(a);
+num.push(b);
 
 // Generamos los siguientes n-2 números de la secuencia
 for (let i = 2; i < n; i++) {
-    let siguiente = a + b;
-    numeros.push(siguiente);
+    let next = a + b;
+    num.push(next);
     a = b;
-    b = siguiente;
+    b = next;
 }
 
-console.log(numeros);
+console.log(num);
