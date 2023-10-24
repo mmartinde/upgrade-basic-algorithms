@@ -151,14 +151,14 @@ let rowAcolC= newToysArray[0][1];
 let rowBcolA; // extraer de mi mapa el parametro A del juguete dos. 
 for (const [toy, value] of toysMap) {
     if (toy === toy2) {
-      rowAcolB = toy.id;
+      rowBcolA = toy.id;
       break;
     }
   }
 let rowBcolB;
 for (const [toy, value] of toysMap) {
     if (toy === toy2) {
-      rowAcolB = toy.name;
+      rowBcolB = toy.name;
       break;
     }
   } 
@@ -166,18 +166,18 @@ let rowBcolC = newToysArray[1][1];
 let rowCcolA; // extraer de mi mapa el parametro A del juguete tres. 
 for (const [toy, value] of toysMap) {
     if (toy === toy3) {
-      rowAcolB = toy.id;
+      rowCcolA = toy.id;
       break;
     }
   }
-let rowCcolB = 'algo'; 
+let rowCcolB; 
 for (const [toy, value] of toysMap) {
     if (toy === toy3) {
-      rowAcolB = toy.name;
+      rowCcolB = toy.name;
       break;
     }
   }
-let rowCcolC = newToysArray[1][2];
+let rowCcolC = newToysArray[1][1];
 
 /*
 EJERCICIO 8: FIBONACCI (OPCIONALES)

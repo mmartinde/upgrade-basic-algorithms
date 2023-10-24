@@ -1,3 +1,24 @@
 body {
-    background-color: grey;
+    background-color: rgb(238, 240, 225);
 }
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border:1px solid black;
+    display: flex;
+    width: 90%;
+    height: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    font-weight: bold;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  tr:nth-child(even) {background-color: #f2f2f2;}
